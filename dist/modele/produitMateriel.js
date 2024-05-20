@@ -5,6 +5,4 @@ export class ProduitMateriel {
         this.libelle = libelle;
         this.poids = poids;
     }
-    info() {
-    }
 }

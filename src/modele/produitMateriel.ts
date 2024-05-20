@@ -1,4 +1,5 @@
-import { Produit} from "./produit.js";
+import { Produit } from "./produit.js";
+import { Cargaison } from "./cargaison.js";
 
 export abstract class ProduitMateriel implements Produit {
     libelle: string;
@@ -7,10 +8,7 @@ export abstract class ProduitMateriel implements Produit {
     constructor(libelle: string, poids: number) {
         this.libelle = libelle;
         this.poids = poids;
-        
-    }
-    public info(): void {
-
     }
 
+    abstract calculerFrais(cargaison: Cargaison): number;
 }

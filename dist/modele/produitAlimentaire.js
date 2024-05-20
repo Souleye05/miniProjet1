@@ -8,4 +8,7 @@ export class ProduitAlimentaire {
     info() {
         console.log("ProduitAlimentaire: " + this.libelle + " poids: " + this.poids);
     }
+    calculerFrais(cargaison) {
+        return this.poids * cargaison.getFrais();
+    }
 }

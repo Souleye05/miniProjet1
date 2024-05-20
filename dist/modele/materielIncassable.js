@@ -3,6 +3,7 @@ export class MaterielIncassable extends ProduitMateriel {
     constructor(libelle, poids) {
         super(libelle, poids);
     }
-    info() {
+    calculerFrais(cargaison) {
+        return this.poids * cargaison.getFrais();
     }
 }

@@ -1,4 +1,5 @@
-// import { CargaisonMaritime } from "./cargaisonMaritime.js";
+import { ProduitChimique } from "./produitChimique.js";
+import { MaterielFragile } from "./materielFragile.js";
 export class Cargaison {
     produits = [];
     distance;
@@ -7,38 +8,34 @@ export class Cargaison {
         this.distance = distance;
         this.frais = frais;
     }
-    // Méthode d'ajout de produits
     ajouterProduit(produit) {
         if (this.produits.length >= 10) {
             console.log("La cargaison est pleine");
             return;
         }
-        // if (produit instanceof MaterielFragile && this instanceof CargaisonMaritime) {
-        //     console.log("Cargaison maritime ne peut pas transporter de produit fragile");
-        //     return;
-        // } 
-        // if (produit instanceof ProduitChimique && !(this instanceof CargaisonMaritime)) {
-        //     console.log("Cargaison maritime doit être transportée par voie maritime");
-        //     return;
-        // }
+        if (produit instanceof MaterielFragile && this instanceof CargaisonMaritime) {
+            console.log("Les produits fragiles ne doivent pas être transportés par voie maritime");
+            return;
+        }
+        if (produit instanceof ProduitChimique && !(this instanceof CargaisonMaritime)) {
+            console.log("Les produits chimiques doivent être transportés par voie maritime");
+            return;
+        }
         this.produits.push(produit);
-        console.log("Produit ajouté: " + produit.libelle + " - Montant Total: " + this.sommeTotal());
+        console.log("Produit ajouté: ${produit.libelle} - Montant Total: ${this.sommeTotal()} ");
     }
-    // Nombre de produit
     nombreProduits() {
         return this.produits.length;
     }
-    //  le montant total des frais de transport
     sommeTotal() {
         return this.produits.reduce((total, produit) => total + produit.poids * this.frais, 0);
     }
-    // getter and setter
     getDistance() {
         return this.distance;
     }
     setDistance(distance) {
         if (distance < 0) {
-            throw new Error("la distance ne peut pas être négative");
+            throw new Error("La distance ne peut pas être négative");
         }
         this.distance = distance;
     }
@@ -47,11 +44,46 @@ export class Cargaison {
     }
     setFrais(frais) {
         if (frais < 0) {
-            throw new Error("le frais ne peut pas être négatif");
+            throw new Error("Les frais ne peuvent pas être négatifs");
         }
         this.frais = frais;
     }
     getProduits() {
         return this.produits;
+    }
+}
+export class CargaisonMaritime extends Cargaison {
+    dureeTransit;
+    constructor(distance, frais) {
+        super(distance, frais);
+        this.dureeTransit = 19;
+    }
+    calculerFrais() {
+        return this.distance * this.frais;
+    }
+    getDureeTransit() {
+        return this.dureeTransit;
+    }
+    setDureeTransit(dureeTransit) {
+        if (dureeTransit < 0) {
+            throw new Error("La durée du transit ne peut pas être négative");
+        }
+        this.dureeTransit = dureeTransit;
+    }
+}
+export class CargaisonAerienne extends Cargaison {
+    constructor(distance) {
+        super(distance, 100);
+    }
+    calculerFrais() {
+        return this.distance * this.frais;
+    }
+}
+export class CargaisonRoutier extends Cargaison {
+    constructor(distance) {
+        super(distance, 90);
+    }
+    calculerFrais() {
+        return this.distance * this.frais;
     }
 }

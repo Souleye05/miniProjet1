@@ -7,6 +7,7 @@ export class ProduitChimique {
         this.poids = poids;
         this.toxicite = toxicite;
     }
-    info() {
+    calculerFrais(cargaison) {
+        return this.poids * cargaison.getFrais();
     }
 }

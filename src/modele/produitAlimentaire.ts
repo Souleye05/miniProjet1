@@ -1,5 +1,5 @@
 import { Produit } from "./produit.js";
-import { Cargaison } from "./cargaison";
+import { Cargaison } from "./cargaison.js";
 
 export class ProduitAlimentaire implements Produit {
     libelle: string;
@@ -15,4 +15,8 @@ export class ProduitAlimentaire implements Produit {
         console.log("ProduitAlimentaire: " + this.libelle +  " poids: " + this.poids);
     }
 
+    public calculerFrais(cargaison: Cargaison): number {
+        return this.poids * cargaison.getFrais();
+    }
 }
+
