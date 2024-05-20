@@ -1,14 +1,11 @@
 import { Produit } from "./produit.js";
 import { ProduitChimique } from "./produitChimique.js";
 import { MaterielFragile } from "./materielFragile.js";
-// import { CargaisonMaritime } from "./cargaisonMaritime.js";
-
 
 export abstract class Cargaison {
     protected produits: Produit[] = [];
     protected distance: number;
     protected frais: number;
-
 
     constructor (distance: number, frais: number ){
         this.distance = distance;
@@ -24,15 +21,6 @@ public ajouterProduit(produit: Produit): void {
         return;
     }
     
-    // if (produit instanceof MaterielFragile && this instanceof CargaisonMaritime) {
-    //     console.log("Cargaison maritime ne peut pas transporter de produit fragile");
-    //     return;
-    // } 
-    
-    // if (produit instanceof ProduitChimique && !(this instanceof CargaisonMaritime)) {
-    //     console.log("Cargaison maritime doit être transportée par voie maritime");
-    //     return;
-    // }
     
     this.produits.push(produit);
     console.log("Produit ajouté: " + produit.libelle + " - Montant Total: " + this.sommeTotal());
