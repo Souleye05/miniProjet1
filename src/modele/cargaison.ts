@@ -6,10 +6,12 @@ export abstract class Cargaison {
     protected produits: Produit[] = [];
     protected distance: number;
     protected frais: number;
+    public image: string;
 
-    constructor(distance: number, frais: number) {
+    constructor(distance: number, frais: number, image: string) {
         this.distance = distance;
         this.frais = frais;
+        this.image = image;
     }
 
     abstract calculerFrais(): number;
@@ -72,8 +74,8 @@ export abstract class Cargaison {
 export class CargaisonMaritime extends Cargaison {
     private dureeTransit: number;
 
-    constructor(distance: number, frais: number) {
-        super(distance, frais);
+    constructor(distance: number, frais: number, image: string) {
+        super(distance, frais, image);
         this.dureeTransit = 19; 
     }
 
@@ -94,8 +96,8 @@ export class CargaisonMaritime extends Cargaison {
 }
 
 export class CargaisonAerienne extends Cargaison {
-    constructor(distance: number) {
-        super(distance, 100); 
+    constructor(distance: number, image: string) {
+        super(distance, 100, image); 
     }
 
     public calculerFrais(): number {
@@ -104,8 +106,8 @@ export class CargaisonAerienne extends Cargaison {
 }
 
 export class CargaisonRoutier extends Cargaison {
-    constructor(distance: number) {
-        super(distance, 90); 
+    constructor(distance: number, image: string) {
+        super(distance, 90, image); 
     }
 
     public calculerFrais(): number {
