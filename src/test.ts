@@ -1,4 +1,4 @@
-import { Cargaison, CargaisonAerienne, CargaisonMaritime, CargaisonRoutier } from './modele/cargaison.js';
+/* import { Cargaison, CargaisonAerienne, CargaisonMaritime, CargaisonRoutier } from './modele/cargaison.js';
 import { Produit } from './modele/produit.js';
 import { ProduitAlimentaire } from './modele/produitAlimentaire.js';
 import { ProduitChimique } from './modele/produitChimique.js';
@@ -167,23 +167,23 @@ document.getElementById('linkProduit')?.addEventListener("click", function(){
 
 
     
-// ajouter une nouvelle cargaison
-document.getElementById('formAddCargaison')?.addEventListener('submit', function(event) {
-    event.preventDefault();
+// // ajouter une nouvelle cargaison
+// document.getElementById('formAddCargaison')?.addEventListener('submit', function(event) {
+//     event.preventDefault();
 
-    const typeCargaison = (document.getElementById('typeCargaison') as HTMLSelectElement).value;
-    const distance = parseFloat((document.getElementById('distance') as HTMLInputElement).value);
-    const frais = parseFloat((document.getElementById('frais') as HTMLInputElement).value);
+//     const typeCargaison = (document.getElementById('typeCargaison') as HTMLSelectElement).value;
+//     const distance = parseFloat((document.getElementById('distance') as HTMLInputElement).value);
+//     const frais = parseFloat((document.getElementById('frais') as HTMLInputElement).value);
 
-    if (!typeCargaison || isNaN(distance) || isNaN(frais) ||) {
-        alert('Veuillez remplir tous les champs correctement');
-        return;
-    }
+//     if (!typeCargaison || isNaN(distance) || isNaN(frais) ) {
+//         alert('Veuillez remplir tous les champs correctement');
+//         return;
+//     }
 
-    const newCargaison = new Cargaison(typeCargaison, distance, frais);
-    cargaisons[typeCargaison] = newCargaison;
-    AjoutCargaison();
-});
+//     const newCargaison = new Cargaison(typeCargaison, distance, frais);
+//     cargaisons[typeCargaison] = newCargaison;
+//     AjoutCargaison();
+// });
 
 // Ajouter sur la table des cargaisons
 function AjoutCargaison() {
@@ -223,24 +223,203 @@ function AjoutCargaison() {
 }
 
 
-// Filtrer les cargaisons par type
-document.getElementById('filterInput')?.addEventListener('input', function() {
-    const filterValue = (document.getElementById('filterInput') as HTMLInputElement).value.toLowerCase();
-    const rows = document.querySelectorAll('#cargaisonTableBody tr');
-    rows.forEach(row => {
-        const typeCell = row.querySelector('td:first-child');
-        if (typeCell) {
-            const typeText = typeCell.textContent?.toLowerCase() || '';
-            if (typeText.includes(filterValue)) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        }
-    });
-});
+// // Filtrer les cargaisons par type
+// document.getElementById('filterInput')?.addEventListener('input', function() {
+//     const filterValue = (document.getElementById('filterInput') as HTMLInputElement).value.toLowerCase();
+//     const rows = document.querySelectorAll('#cargaisonTableBody tr');
+//     rows.forEach(row => {
+//         const typeCell = row.querySelector('td:first-child');
+//         if (typeCell) {
+//             const typeText = typeCell.textContent?.toLowerCase() || '';
+//             if (typeText.includes(filterValue)) {
+//                 row.style.display = '';
+//             } else {
+//                 row.style.display = 'none';
+//             }
+//         }
+//     });
+// });
 
 
 updateDate();
 AfficherProduits();
 AjoutCargaison();
+ */
+import { Cargaison } from './modele/cargaison.js';
+
+
+
+    const limitationType = (document.getElementById('limitation') as HTMLSelectElement);
+    limitationType.addEventListener('change', () => {
+    const poidsField = document.getElementById('poidsField') as HTMLElement;
+    const produitField = document.getElementById('produitField') as HTMLElement;
+
+    if (limitationType.value == 'poids') {
+        poidsField.classList.remove('hidden');
+        produitField.classList.add('hidden');
+    } else if (limitationType.value == 'produit') {
+        poidsField.classList.add('hidden');
+        produitField.classList.remove('hidden');
+    } else {
+        poidsField.classList.add('hidden');
+        produitField.classList.add('hidden');
+    }
+});
+  
+document.getElementById('valider')?.addEventListener('click', () => {
+  afficherCargaisons();
+});
+
+// afficherCargaisons();
+
+// // Fonction pour afficher les cargaisons
+// function afficherCargaisons(): void {
+//   fetch('../public/data/cargos.json')
+//     .then(response => response.json())
+//     .then(data => {
+//       const cargaisons: Cargaison[] = data.cargaisons;
+//       const cargaisonList = document.getElementById('cargaisonbody');
+//       if (!cargaisonList) return;
+//       cargaisonList.innerHTML = '';
+//       cargaisons.forEach(cargaison => {
+//         const row = document.createElement('tr');
+//         row.innerHTML = `
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.numero}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.type}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.lieu_depart}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.lieu_arrivee}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.date_depart}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.date_arrivee}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.distance}</td>
+//           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><button class="bg-blue-500 text-white px-1 py-1 rounded btn-view" type="button" data-id="${cargaison.idcargo}">voir</button></td>
+//         `;
+//         cargaisonList.appendChild(row);
+//       });
+
+    
+//     })
+
+// }
+
+let currentPage = 1;
+const itemsPerPage = 5; // Nombre de cargaisons par page
+let cargaisons: Cargaison[] = [];
+
+function afficherCargaisons(): void {
+    fetch('../public/data/cargos.json')
+      .then(response => response.json())
+      .then(data => {
+        cargaisons = data.cargaisons;
+        displayPage(currentPage);
+      });
+  }
+  
+  function displayPage(page: number): void {
+    const cargaisonList = document.getElementById('cargaisonbody');
+    if (!cargaisonList) return;
+    
+    cargaisonList.innerHTML = '';
+  
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const pageCargaisons = cargaisons.slice(startIndex, endIndex);
+  
+    pageCargaisons.forEach(cargaison => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.numero}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.type}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.lieu_depart}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.lieu_arrivee}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.date_depart}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.date_arrivee}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${cargaison.distance}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><button class="bg-blue-500 text-white px-1 py-1 rounded btn-view" type="button" data-id="${cargaison.idcargo}">voir</button></td>
+      `;
+      cargaisonList.appendChild(row);
+    });
+  
+    updatePaginationControls();
+  }
+
+  function updatePaginationControls(): void {
+    const paginationControls = document.getElementById('pagination-controls');
+    if (!paginationControls) return;
+    
+    paginationControls.innerHTML = '';
+    
+    const totalPages = Math.ceil(cargaisons.length / itemsPerPage);
+  
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement('button');
+      button.innerText = i.toString();
+      button.classList.add('pagination-button');
+      button.className = `join-item btn`;
+      if (i === currentPage) {
+        button.classList.add('active');
+      }
+      button.addEventListener('click', () => {
+        currentPage = i;
+        displayPage(currentPage);
+      });
+      paginationControls.appendChild(button);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    afficherCargaisons();
+  });
+    
+document.getElementById('form_id')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+  
+    const idcargo = Cargaison.length +1;
+    const typeCargaison = (document.getElementById('type') as HTMLSelectElement).value;
+    const numero = "CRG" + Math.floor(Math.random() * 1000);  // Générer un numéro aléatoire pour la cargaison
+    const poidsCargaison = parseFloat((document.getElementById('poids') as HTMLInputElement).value);
+    const pointDepart = (document.getElementById('depart') as HTMLInputElement).value;
+    const pointArrive = (document.getElementById('arrivee') as HTMLInputElement).value;
+    const dateDepart = (document.getElementById('dateDepart') as HTMLInputElement).value;
+    const dateArrivee = (document.getElementById('dateArrivee') as HTMLInputElement).value;
+    const distance = parseFloat((document.getElementById('distance') as HTMLInputElement).value);
+
+
+    const cargaison = new Cargaison(
+        'addCargaison',
+        idcargo,
+        numero,
+        typeCargaison,
+        poidsCargaison,
+        pointDepart,
+        pointArrive,
+        dateDepart,
+        dateArrivee,
+        distance
+    
+      );
+    
+  
+    
+      console.log(cargaison);
+
+      fetch('../template/api.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cargaison),
+      })
+        .then(response => response.json())
+        .then(result => {
+          console.log(result);
+          if (result.status === 'success') {
+            alert(result.message);
+          } else {
+            alert('Erreur lors de l\'ajout de la cargaison');
+          }
+        })
+       
+    });
+    
+    
+    
+    

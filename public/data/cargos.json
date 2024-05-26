@@ -1,0 +1,271 @@
+{
+    "cargaisons": [
+        {
+            "idcargo": 1,
+            "numero": "CRG001",
+            "type": "maritime",
+            "prix": 4566,
+            "poids": 5000,
+            "date_depart": "12\/12\/2023",
+            "date_arrivee": "12\/12\/2023",
+            "lieu_depart": "Paris",
+            "lieu_arrivee": "Londres",
+            "distance_km": 350
+        },
+        {
+            "idcargo": 2,
+            "numero": "CRG002",
+            "type": "aerienne",
+            "prix": 4566,
+            "poids": 5000,
+            "date_depart": "12\/12\/2023",
+            "date_arrivee": "12\/12\/2023",
+            "lieu_depart": "Paris",
+            "lieu_arrivee": "Londres",
+            "distance_km": 350
+        },
+        {
+            "idcargo": 2,
+            "numero": "CRG002",
+            "type": "aerienne",
+            "prix": 4566,
+            "poids": 5000,
+            "date_depart": "12\/12\/2023",
+            "date_arrivee": "12\/12\/2023",
+            "lieu_depart": "Paris",
+            "lieu_arrivee": "Londres",
+            "distance_km": 350
+        },
+        {
+            "idcargo": "665391183b4ae",
+            "numero": "CRG27",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "665396875c47e",
+            "numero": "CRG322",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "6653968f4d953",
+            "numero": "CRG149",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "6653968fe9266",
+            "numero": "CRG807",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "6653969089911",
+            "numero": "CRG208",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "665396912c6ed",
+            "numero": "CRG73",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539691b1f73",
+            "numero": "CRG223",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "665396aa6e120",
+            "numero": "CRG420",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "665396aa9a307",
+            "numero": "CRG980",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "665396ab0eb45",
+            "numero": "CRG770",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Consequatur fuga Si",
+            "lieu_arrivee": "22-Jul-2003",
+            "date_depart": "1980-02-11",
+            "date_arrivee": "2004-11-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "6653995057cff",
+            "numero": "CRG903",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "Inventore sequi dolo",
+            "lieu_arrivee": "23-Feb-2021",
+            "date_depart": "2008-05-16",
+            "date_arrivee": "2010-11-27",
+            "distance_km": null
+        },
+        {
+            "idcargo": "6653996db0c76",
+            "numero": "CRG34",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "Fugit quam aliquid ",
+            "lieu_arrivee": "31-Dec-1997",
+            "date_depart": "1996-07-09",
+            "date_arrivee": "2000-12-02",
+            "distance_km": null
+        },
+        {
+            "idcargo": "665399c012fa3",
+            "numero": "CRG591",
+            "type": "maritime",
+            "poids": null,
+            "lieu_depart": "mbour",
+            "lieu_arrivee": "jaol",
+            "date_depart": "1996-07-09",
+            "date_arrivee": "2000-12-02",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a0037ce7",
+            "numero": "CRG875",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a02cc125",
+            "numero": "CRG306",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a05cea52",
+            "numero": "CRG260",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a05ef717",
+            "numero": "CRG588",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a061bd8e",
+            "numero": "CRG751",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a0638c5e",
+            "numero": "CRG984",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a0664a80",
+            "numero": "CRG242",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        },
+        {
+            "idcargo": "66539a0f8a619",
+            "numero": "CRG149",
+            "type": "routi\u00e8re",
+            "poids": null,
+            "lieu_depart": "sidi",
+            "lieu_arrivee": "dakar",
+            "date_depart": "1973-11-27",
+            "date_arrivee": "1987-07-01",
+            "distance_km": null
+        }
+    ]
+}
